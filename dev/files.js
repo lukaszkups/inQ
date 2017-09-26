@@ -75,6 +75,36 @@ function getFiles(pathArr = []) {
   });
 }
 
+function folderExists(pathToFolder) {
+  return new Promise((resolve, reject) => {
+    fs.lstat(pathToFolder, (err, stat) => {
+      if (err) {
+        resolve(false);
+      }
+      if (stat.folderExists()) {
+        resolve(true);
+      }
+      resolve(false);
+    })
+  });
+}
+
+function fileExists(pathToFile) {
+  return new Promise((resolve, reject) => {
+    fs.lstat(pathToFile, (err, stat) => {
+      if (err) {
+        resolve(false);
+      }
+      if (stat.fileExists()) {
+        resolve(true);
+      }
+      resolve(false);
+    })
+  });
+}
+
 module.exports.listPathContents = listPathContents;
 module.exports.getFolders = getFolders;
 module.exports.getFiles = getFiles;
+module.exports.folderExists = folderExists;
+module.exports.fileExists = fileExists;
