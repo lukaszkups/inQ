@@ -13,3 +13,5 @@
 - check if `theme/currentTheme/list-entry/default.pug` exists
 - check if `theme/default/list-entry/default.pug` exists
 - compile single blog entry as themed HTML file
+
+// 6357, 6506, 6354,
