@@ -81,7 +81,7 @@ function folderExists(pathToFolder) {
       if (err) {
         resolve(false);
       }
-      if (stat.folderExists()) {
+      if (stat.isDirectory()) {
         resolve(true);
       }
       resolve(false);
@@ -95,7 +95,7 @@ function fileExists(pathToFile) {
       if (err) {
         resolve(false);
       }
-      if (stat.fileExists()) {
+      if (stat.isFile()) {
         resolve(true);
       }
       resolve(false);
