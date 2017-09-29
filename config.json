@@ -1,0 +1,16 @@
+{
+  "theme": {
+    "name": "programmer",
+    "sorting": {
+      "notes": "asc",
+      "projects": "desc"
+    }
+  },
+  "output": {
+    "url": "./output",
+    "minify": true
+  },
+  "disqus": {
+    "apiKey": ""
+  }
+}

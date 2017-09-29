@@ -1,4 +1,4 @@
-const {listPathContents, getFiles, getFolders, folderExists, fileExists} = require('./dev/files');
+const {listPathContents, getFiles, getFolders, folderExists, fileExists, createFolder} = require('./dev/files');
 
 listPathContents('./content/lists/notes').then(list => {
   getFiles(list).then(files => {
@@ -25,3 +25,7 @@ fileExists('./content/lists/').then(res => {
 fileExists('./content/lists/notes/2017-09-17-hello-world.md').then(res => {
   console.log('File exists 2: ', res);
 });
+
+createFolder('./ulala').then(res => {
+  console.log('Created folder: ', res);
+})

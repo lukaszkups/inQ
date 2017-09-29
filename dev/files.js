@@ -103,8 +103,21 @@ function fileExists(pathToFile) {
   });
 }
 
+function createFolder(folderUrl) {
+  return new Promise((resolve, reject) => {
+    fs.mkdirs(folderUrl, (err, stat) => {
+      if (err) {
+        reject(err);
+      }
+      resolve(folderUrl);
+    });
+  });
+}
+
 module.exports.listPathContents = listPathContents;
 module.exports.getFolders = getFolders;
 module.exports.getFiles = getFiles;
 module.exports.folderExists = folderExists;
 module.exports.fileExists = fileExists;
+module.exports.createFolder = createFolder;
+
