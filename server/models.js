@@ -129,3 +129,10 @@ Tag.belongsToMany(Post);
 // Post-Category relationship
 Post.hasMany(Category);
 Category.belongsToMany(Post);
+
+module.exports.user = User;
+module.exports.page = Page;
+module.exports.template = Template;
+module.exports.taguser = Tag;
+module.exports.list = List;
+module.exports.category = Category;
